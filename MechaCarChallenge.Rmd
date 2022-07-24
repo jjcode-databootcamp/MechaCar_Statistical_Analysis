@@ -1,0 +1,57 @@
+---
+title: "MechaCar Statistical Analysis Notebook"
+output: html_notebook
+---
+
+**Pre-requisite**
+
+You will need R install on your computer and an IDE. R Studio is recommended. You should also install tidyverse with ***install.packages("tidyverse")***. This will install the core tidyverse packages that you are likely to use in almost every analysis:
+
+-   [ggplot2](https://ggplot2.tidyverse.org/), for data visualisation.
+
+-   [dplyr](https://dplyr.tidyverse.org), for data manipulation.
+
+-   [tidyr](https://tidyr.tidyverse.org), for data tidying.
+
+-   [readr](https://readr.tidyverse.org/), for data import.
+
+-   [purrr](https://purrr.tidyverse.org/), for functional programming.
+
+-   [tibble](https://tibble.tidyverse.org), for tibbles, a modern re-imagining of data frames.
+
+```{r}
+# 1a. Load the dplyr package
+library(dplyr)
+```
+
+```{r}
+# 1b. Load the tidyverse package
+library(tidyverse)
+```
+
+```{r}
+# 2. Import and read in the MechaCar_mpg.csv file as a dataframe.
+mecha_mpg <- read.csv(file='./Resources/Data/MechaCar_mpg.csv',check.names=F,stringsAsFactors = F) 
+```
+
+```{r}
+# 3. Run linear regression on all six variables(i.e., columns), and add the dataframe as the data parameter.
+
+lm(mpg ~ vehicle_length + vehicle_weight + spoiler_angle + ground_clearance + AWD, data=mecha_mpg)
+
+```
+
+```{r}
+# 6. Using the summary() function, determine the p-value and the r-squared value for the linear regression model.
+
+summary(lm(mpg ~ vehicle_length + vehicle_weight + spoiler_angle + ground_clearance + AWD, data=mecha_mpg)) 
+
+```
+
+```{r}
+
+```
+
+```{r}
+
+```
