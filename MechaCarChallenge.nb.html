@@ -1826,22 +1826,55 @@ mecha_mpg &lt;- read.csv(file=&#39;./Resources/Data/MechaCar_mpg.csv&#39;,check.
 <!-- rnb-text-begin -->
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuIyAzLiBSdW4gbGluZWFyIHJlZ3Jlc3Npb24gb24gYWxsIHNpeCB2YXJpYWJsZXMoaS5lLiwgY29sdW1ucyksIGFuZCBhZGQgdGhlIGRhdGFmcmFtZSBhcyB0aGUgZGF0YSBwYXJhbWV0ZXIuXG5cbmxtKG1wZyB+IHZlaGljbGVfbGVuZ3RoICsgdmVoaWNsZV93ZWlnaHQgKyBzcG9pbGVyX2FuZ2xlICsgZ3JvdW5kX2NsZWFyYW5jZSArIEFXRCwgZGF0YT1tZWNoYV9tcGcpXG5cbmBgYCJ9 -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuIyAzLiBSdW4gbGluZWFyIHJlZ3Jlc3Npb24gb24gYWxsIHNpeCB2YXJpYWJsZXMoaS5lLiwgY29sdW1ucyksIGFuZCBhZGQgdGhlIGRhdGFmcmFtZSBhcyB0aGUgZGF0YSBwYXJhbWV0ZXIuXG5cbmxtKG1wZyB+IHZlaGljbGVfbGVuZ3RoICsgdmVoaWNsZV93ZWlnaHQgKyBzcG9pbGVyX2FuZ2xlICsgZ3JvdW5kX2NsZWFyYW5jZSArIEFXRCwgZGF0YT1tZWNoYV9tcGcpXG5gYGAifQ== -->
 <pre class="r"><code># 3. Run linear regression on all six variables(i.e., columns), and add the dataframe as the data parameter.
 
-lm(mpg ~ vehicle_length + vehicle_weight + spoiler_angle + ground_clearance + AWD, data=mecha_mpg)
-</code></pre>
+lm(mpg ~ vehicle_length + vehicle_weight + spoiler_angle + ground_clearance + AWD, data=mecha_mpg)</code></pre>
 <!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiXG5DYWxsOlxubG0oZm9ybXVsYSA9IG1wZyB+IHZlaGljbGVfbGVuZ3RoICsgdmVoaWNsZV93ZWlnaHQgKyBzcG9pbGVyX2FuZ2xlICsgXG4gICAgZ3JvdW5kX2NsZWFyYW5jZSArIEFXRCwgZGF0YSA9IG1lY2hhX21wZylcblxuQ29lZmZpY2llbnRzOlxuICAgICAoSW50ZXJjZXB0KSAgICB2ZWhpY2xlX2xlbmd0aCAgICB2ZWhpY2xlX3dlaWdodCAgICAgc3BvaWxlcl9hbmdsZSAgZ3JvdW5kX2NsZWFyYW5jZSAgICAgICAgICAgICAgIEFXRCAgXG4gICAgICAtMS4wNDBlKzAyICAgICAgICAgNi4yNjdlKzAwICAgICAgICAgMS4yNDVlLTAzICAgICAgICAgNi44NzdlLTAyICAgICAgICAgMy41NDZlKzAwICAgICAgICAtMy40MTFlKzAwICBcbiJ9 -->
+<pre><code>
+Call:
+lm(formula = mpg ~ vehicle_length + vehicle_weight + spoiler_angle + 
+    ground_clearance + AWD, data = mecha_mpg)
+
+Coefficients:
+     (Intercept)    vehicle_length    vehicle_weight     spoiler_angle  ground_clearance               AWD  
+      -1.040e+02         6.267e+00         1.245e-03         6.877e-02         3.546e+00        -3.411e+00  </code></pre>
+<!-- rnb-output-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuIyA2LiBVc2luZyB0aGUgc3VtbWFyeSgpIGZ1bmN0aW9uLCBkZXRlcm1pbmUgdGhlIHAtdmFsdWUgYW5kIHRoZSByLXNxdWFyZWQgdmFsdWUgZm9yIHRoZSBsaW5lYXIgcmVncmVzc2lvbiBtb2RlbC5cblxuc3VtbWFyeShsbShtcGcgfiB2ZWhpY2xlX2xlbmd0aCArIHZlaGljbGVfd2VpZ2h0ICsgc3BvaWxlcl9hbmdsZSArIGdyb3VuZF9jbGVhcmFuY2UgKyBBV0QsIGRhdGE9bWVjaGFfbXBnKSkgXG5cbmBgYCJ9 -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuIyA2LiBVc2luZyB0aGUgc3VtbWFyeSgpIGZ1bmN0aW9uLCBkZXRlcm1pbmUgdGhlIHAtdmFsdWUgYW5kIHRoZSByLXNxdWFyZWQgdmFsdWUgZm9yIHRoZSBsaW5lYXIgcmVncmVzc2lvbiBtb2RlbC5cblxuc3VtbWFyeShsbShtcGcgfiB2ZWhpY2xlX2xlbmd0aCArIHZlaGljbGVfd2VpZ2h0ICsgc3BvaWxlcl9hbmdsZSArIGdyb3VuZF9jbGVhcmFuY2UgKyBBV0QsIGRhdGE9bWVjaGFfbXBnKSkgXG5gYGAifQ== -->
 <pre class="r"><code># 6. Using the summary() function, determine the p-value and the r-squared value for the linear regression model.
 
-summary(lm(mpg ~ vehicle_length + vehicle_weight + spoiler_angle + ground_clearance + AWD, data=mecha_mpg)) 
-</code></pre>
+summary(lm(mpg ~ vehicle_length + vehicle_weight + spoiler_angle + ground_clearance + AWD, data=mecha_mpg)) </code></pre>
 <!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiXG5DYWxsOlxubG0oZm9ybXVsYSA9IG1wZyB+IHZlaGljbGVfbGVuZ3RoICsgdmVoaWNsZV93ZWlnaHQgKyBzcG9pbGVyX2FuZ2xlICsgXG4gICAgZ3JvdW5kX2NsZWFyYW5jZSArIEFXRCwgZGF0YSA9IG1lY2hhX21wZylcblxuUmVzaWR1YWxzOlxuICAgICBNaW4gICAgICAgMVEgICBNZWRpYW4gICAgICAgM1EgICAgICBNYXggXG4tMTkuNDcwMSAgLTQuNDk5NCAgLTAuMDY5MiAgIDUuNDQzMyAgMTguNTg0OSBcblxuQ29lZmZpY2llbnRzOlxuICAgICAgICAgICAgICAgICAgIEVzdGltYXRlIFN0ZC4gRXJyb3IgdCB2YWx1ZSBQcig+fHR8KSAgICBcbihJbnRlcmNlcHQpICAgICAgLTEuMDQwZSswMiAgMS41ODVlKzAxICAtNi41NTkgNS4wOGUtMDggKioqXG52ZWhpY2xlX2xlbmd0aCAgICA2LjI2N2UrMDAgIDYuNTUzZS0wMSAgIDkuNTYzIDIuNjBlLTEyICoqKlxudmVoaWNsZV93ZWlnaHQgICAgMS4yNDVlLTAzICA2Ljg5MGUtMDQgICAxLjgwNyAgIDAuMDc3NiAuICBcbnNwb2lsZXJfYW5nbGUgICAgIDYuODc3ZS0wMiAgNi42NTNlLTAyICAgMS4wMzQgICAwLjMwNjkgICAgXG5ncm91bmRfY2xlYXJhbmNlICAzLjU0NmUrMDAgIDUuNDEyZS0wMSAgIDYuNTUxIDUuMjFlLTA4ICoqKlxuQVdEICAgICAgICAgICAgICAtMy40MTFlKzAwICAyLjUzNWUrMDAgIC0xLjM0NiAgIDAuMTg1MiAgICBcbi0tLVxuU2lnbmlmLiBjb2RlczogIDAg4oCYKioq4oCZIDAuMDAxIOKAmCoq4oCZIDAuMDEg4oCYKuKAmSAwLjA1IOKAmC7igJkgMC4xIOKAmCDigJkgMVxuXG5SZXNpZHVhbCBzdGFuZGFyZCBlcnJvcjogOC43NzQgb24gNDQgZGVncmVlcyBvZiBmcmVlZG9tXG5NdWx0aXBsZSBSLXNxdWFyZWQ6ICAwLjcxNDksXHRBZGp1c3RlZCBSLXNxdWFyZWQ6ICAwLjY4MjUgXG5GLXN0YXRpc3RpYzogMjIuMDcgb24gNSBhbmQgNDQgREYsICBwLXZhbHVlOiA1LjM1ZS0xMVxuIn0= -->
+<pre><code>
+Call:
+lm(formula = mpg ~ vehicle_length + vehicle_weight + spoiler_angle + 
+    ground_clearance + AWD, data = mecha_mpg)
+
+Residuals:
+     Min       1Q   Median       3Q      Max 
+-19.4701  -4.4994  -0.0692   5.4433  18.5849 
+
+Coefficients:
+                   Estimate Std. Error t value Pr(&gt;|t|)    
+(Intercept)      -1.040e+02  1.585e+01  -6.559 5.08e-08 ***
+vehicle_length    6.267e+00  6.553e-01   9.563 2.60e-12 ***
+vehicle_weight    1.245e-03  6.890e-04   1.807   0.0776 .  
+spoiler_angle     6.877e-02  6.653e-02   1.034   0.3069    
+ground_clearance  3.546e+00  5.412e-01   6.551 5.21e-08 ***
+AWD              -3.411e+00  2.535e+00  -1.346   0.1852    
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Residual standard error: 8.774 on 44 degrees of freedom
+Multiple R-squared:  0.7149,    Adjusted R-squared:  0.6825 
+F-statistic: 22.07 on 5 and 44 DF,  p-value: 5.35e-11</code></pre>
+<!-- rnb-output-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
 <!-- rnb-text-end -->
@@ -1904,14 +1937,14 @@ mecha_coil &lt;- read.csv(file=&#39;./Resources/Data/Suspension_Coil.csv&#39;,ch
 <!-- rnb-text-begin -->
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuIyAyLiBDcmVhdGUgYSB0b3RhbF9zdW1tYXJ5IGRhdGFmcmFtZSBpbiBvcmRlciB0byBkZXJpdmUgbWVhbiwgbWVkaWFuLCB2YXJpYW5jZSwgYW5kIHN0YW5kYXJkIGRldmlhdGlvbiBvZiB0aGUgc3VzcGVuc2lvbiBjb2ls4oCZcyBQU0kgY29sdW1uXG5cbnRvdGFsX3N1bW1hcnkgPC0gbWVjaGFfY29pbCAlPiUgc3VtbWFyaXplKE1lYW5fUFNJPW1lYW4oUFNJKSxcbiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIE1lZGlhbl9QU0k9bWVkaWFuKFBTSSksXG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICBWYXJfUFNJPXZhcihQU0kpLFxuICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgU3RkX0Rldl9QU0k9c2QoUFNJKSxcbiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIGdyb3VwcyA9ICdrZWVwJylcbmBgYCJ9 -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuIyAyLiBDcmVhdGUgYSB0b3RhbF9zdW1tYXJ5IGRhdGFmcmFtZSBpbiBvcmRlciB0byBkZXJpdmUgbWVhbiwgbWVkaWFuLCB2YXJpYW5jZSwgYW5kIHN0YW5kYXJkIGRldmlhdGlvbiBvZiB0aGUgc3VzcGVuc2lvbiBjb2ls4oCZcyBQU0kgY29sdW1uXG5cbnRvdGFsX3N1bW1hcnkgPC0gbWVjaGFfY29pbCAlPiUgc3VtbWFyaXplKE1lYW5fUFNJPW1lYW4oUFNJKSxcbiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIE1lZGlhbl9QU0k9bWVkaWFuKFBTSSksXG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICBWYXJfUFNJPXZhcihQU0kpLFxuICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgU3RkX0Rldl9QU0k9c2QoUFNJKSxcbiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIE51bV9Db2lsPW4oKSwgLmdyb3VwcyA9ICdrZWVwJylcbmBgYCJ9 -->
 <pre class="r"><code># 2. Create a total_summary dataframe in order to derive mean, median, variance, and standard deviation of the suspension coil’s PSI column
 
 total_summary &lt;- mecha_coil %&gt;% summarize(Mean_PSI=mean(PSI),
                                           Median_PSI=median(PSI),
                                           Var_PSI=var(PSI),
                                           Std_Dev_PSI=sd(PSI),
-                                          groups = &#39;keep&#39;)</code></pre>
+                                          Num_Coil=n(), .groups = &#39;keep&#39;)</code></pre>
 <!-- rnb-source-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
