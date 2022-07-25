@@ -9,7 +9,7 @@ Note: This is a R Notebook which outputs a companion file MechaCarChallenge.nb.h
 
 You will need R install on your computer and an IDE. R Studio is recommended. You should also install tidyverse with ***install.packages("tidyverse")***. This will install the core tidyverse packages that you are likely to use in almost every analysis:
 
--   [ggplot2](https://ggplot2.tidyverse.org/), for data visualisation.
+-   [ggplot2](https://ggplot2.tidyverse.org/), for data visualization.
 
 -   [dplyr](https://dplyr.tidyverse.org), for data manipulation.
 
@@ -55,6 +55,19 @@ summary(lm(mpg ~ vehicle_length + vehicle_weight + spoiler_angle + ground_cleara
 ```
 
 ```{r}
+# 5a. Install "car" package Companion to Applied Regression
+install.packages("car",  repos = "http://cran.us.r-project.org")
+
+```
+
+```{r}
+# 5b.Plot linear regression graphs 
+library(car)
+model <- lm(mpg ~ vehicle_length + vehicle_weight + spoiler_angle + ground_clearance + AWD, data=mecha_mpg)
+avPlots(model, layout=c(2,3), marginal.scale=FALSE)
+```
+
+```{r}
 # Optional Steps: Remove the independent variables that have little impact on predicting mpg to see impact
 
 lm(mpg ~ vehicle_length + ground_clearance, data=mecha_mpg)
@@ -83,7 +96,13 @@ total_summary <- mecha_coil %>% summarize(Mean_PSI=mean(PSI),
 ```{r}
 # 3. Create a lot_summary dataframe in order to to group each manufacturing lot by the mean, median, variance, and standard deviation of the suspension coil’s PSI column.
 
-lot_summary <- mecha_coil  %>% group_by(Manufacturing_Lot) %>% summarize(Mean_PSI=mean(PSI),
+```
+
+```{r}
+
+```
+
+```{lot_summary <- mecha_coil  %>% group_by(Manufacturing_Lot) %>% summarize(Mean_PSI=mean(PSI),}
                                           Median_PSI=median(PSI),
                                           Var_PSI=var(PSI),
                                           Std_Dev_PSI=sd(PSI),
