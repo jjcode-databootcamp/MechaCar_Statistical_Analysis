@@ -5,7 +5,7 @@ output: html_notebook
 
 Note: This is a R Notebook which outputs a companion file MechaCarChallenge.nb.html when the Notebook is run.
 
-### **Pre-requisite** 
+### **Pre-requisite**
 
 You will need R install on your computer and an IDE. R Studio is recommended. You should also install tidyverse with ***install.packages("tidyverse")***. This will install the core tidyverse packages that you are likely to use in almost every analysis:
 
@@ -103,7 +103,7 @@ plt2 <- ggplot(mecha_coil,aes(x=Manufacturing_Lot,y=PSI)) #import dataset into g
 plt2 + geom_boxplot()
 ```
 
-### **Deliverable 3:  T-Tests on Suspension Coils**
+### **Deliverable 3: T-Tests on Suspension Coils**
 
 Perform t-tests to determine if all manufacturing lots and each lot individually are statistically different from the population mean of 1,500 pounds per square inch.
 
