@@ -48,7 +48,8 @@ Does the current manufacturing data meet this design specification for all manuf
 ![ttest1](Resources/Images/ttest1.png)
 - Suspension Coils Cumulative T-test
 
-![ttest2](Resources/Images/ttest1.png)
+![ttest2](Resources/Images/ttest2.png)
+
 T-test for the suspension coils results shows the following 
 - Across all manufacturing lots it shows that it is  not statistically different from the population mean. The p-value is not low enough (0.0603) for us to reject the null hypothesis.
 - Lot 1 shows that they are not statistically different from the population mean, and the p-value is not low enough (1) for us to reject the null hypothesis.
