@@ -44,7 +44,7 @@ Does the current manufacturing data meet this design specification for all manuf
 
 
 
-## T-Tests on Suspension Coils, 
+## T-Tests on Suspension Coils
 ![ttest1](Resources/Images/ttest1.png)
 - Suspension Coils Cumulative T-test
 
