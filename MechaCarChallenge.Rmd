@@ -49,7 +49,10 @@ summary(lm(mpg ~ vehicle_length + vehicle_weight + spoiler_angle + ground_cleara
 ```
 
 ```{r}
+# Optional step:
 
+lm(mpg ~ vehicle_length + ground_clearance, data=mecha_mpg)
+summary(lm(mpg ~ vehicle_length + ground_clearance, data=mecha_mpg)) 
 ```
 
 ```{r}
