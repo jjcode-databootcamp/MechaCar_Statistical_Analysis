@@ -91,15 +91,14 @@ lot_summary <- mecha_coil  %>% group_by(Manufacturing_Lot) %>% summarize(Mean_PS
 ```
 
 ```{r}
-# 4. Graph Box plot PSI Whole lot
+# 4a. Graph Box plot PSI Whole lot
 plt1 <- ggplot(mecha_coil,aes(y=PSI)) #import dataset into ggplot2
 plt1 + geom_boxplot() #add boxplot
 
 ```
 
 ```{r}
-
-# box plot: PSI each individual Lot
+# 4b. Graph box plot: PSI each individual Lot
 plt2 <- ggplot(mecha_coil,aes(x=Manufacturing_Lot,y=PSI)) #import dataset into ggplot2
 plt2 + geom_boxplot()
 ```
